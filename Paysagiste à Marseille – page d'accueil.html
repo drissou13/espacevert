@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paysagiste à Marseille | Création et entretien de jardins – Vert Horizon</title>
+<meta name="description" content="Vert Horizon, paysagiste à Marseille : création de jardin, taille de haies, élagage, gazon et entretien régulier. Devis gratuit sous 48 h, appelez-nous !">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--moss:#1d3a2b;--deep:#12261c;--leaf:#4f8a3a;--ochre:#c58a1b;--rust:#a8501f;--soil:#d9cdb6;--water:#1f6e96;--bg:#f6f9f3;--ink:#1a2a21;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#101a14;--ink:#e6efe6;--soil:#3a3326;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Figtree,system-ui,sans-serif;font-size:1.06rem;line-height:1.65;overflow-x:hidden;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.1;margin:0 0 .6em;letter-spacing:-.02em}
+h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:700}
+h3{font-size:1.25rem;font-weight:700}
+p{max-width:62ch;margin:0 0 1em}
+.wrap{max-width:1050px;margin:0 auto;padding:0 1.4rem}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.4rem;max-width:1050px;margin:0 auto}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.3rem;color:var(--leaf)}
+.tel{font-weight:600;color:inherit;text-decoration:none;border-bottom:2px solid var(--ochre)}
+.btn{display:inline-block;background:var(--ochre);color:#1a1405;font-weight:600;padding:.9rem 1.6rem;border-radius:999px;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.tel:focus-visible{outline:3px solid var(--water);outline-offset:3px}
+.btn.alt{background:transparent;color:#fff;border:2px solid #fff;margin-left:.6rem}
+.hero{padding:3rem 0 5rem}
+.hero p{font-size:1.2rem}
+
+/* 1. SOUFFLÉE */
+.blow{position:relative;padding:5rem 0;overflow:hidden}
+.blow .wrap{transition:opacity 1.2s .5s;opacity:.25}
+.blow.go .wrap{opacity:1}
+.leaves{position:absolute;inset:0;pointer-events:none}
+.leaf{position:absolute;width:var(--s);height:var(--s);transform:rotate(var(--r));transition:transform 2.2s cubic-bezier(.5,0,.8,.4) var(--d),opacity .4s 2s}
+.blow.go .leaf{transform:translate(130vw,var(--y)) rotate(calc(var(--r) + 720deg));opacity:0}
+.gust{position:absolute;left:-30%;width:30%;height:2px;background:linear-gradient(90deg,transparent,var(--leaf));opacity:0}
+.blow.go .gust{animation:gust 1.6s var(--d) ease-in}
+@keyframes gust{0%{left:-30%;opacity:.8}100%{left:110%;opacity:0}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:2rem}
+.card{border-left:4px solid var(--leaf);padding:.2rem 0 .2rem 1rem}
+.card ul{padding-left:1.1rem;margin:.4rem 0 0}
+.card li{margin:.25rem 0}
+
+/* 2. RATISSÉE */
+.rake{position:relative;height:150px;overflow:hidden;background:var(--soil);background-image:radial-gradient(circle,#0003 1.5px,transparent 2px),radial-gradient(circle,#0002 1px,transparent 1.5px);background-size:26px 22px,17px 15px;background-position:0 0,7px 6px}
+.furrows{position:absolute;inset:0;width:0;background:var(--soil) repeating-linear-gradient(0deg,#0000 0 9px,#0003 9px 11px,#fff3 11px 13px,#0000 13px 22px);transition:width 3s ease-in-out}
+.tool{position:absolute;top:0;left:0;height:100%;width:90px;transform:translateX(-90px);transition:transform 3s ease-in-out}
+.rake.go .furrows{width:100%}
+.rake.go .tool{transform:translateX(calc(100vw))}
+.about{padding:4rem 0}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.sign{border:2px solid var(--leaf);border-radius:14px;padding:1.4rem;font-weight:500}
+@media(max-width:760px){.about .wrap{grid-template-columns:1fr}}
+
+.why{padding:3rem 0 5rem}
+.why ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem}
+.why li{border-top:3px solid var(--ochre);padding-top:.7rem}
+.why strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;display:block}
+
+/* 3. REMPLIE D'EAU */
+.fill{position:relative;overflow:hidden;background:var(--deep);color:#fff;padding:6rem 0;text-align:center}
+.fill .wrap{position:relative;z-index:2}
+.fill p{margin-inline:auto}
+.water{position:absolute;left:0;right:0;bottom:0;height:0;background:var(--water);transition:height 3.2s ease-out;z-index:1}
+.water::before{content:"";position:absolute;left:0;top:-24px;width:200%;height:26px;background:radial-gradient(circle at 25px 26px,var(--water) 24px,transparent 25px) 0 0/50px 26px repeat-x;animation:wave 4s linear infinite}
+@keyframes wave{to{transform:translateX(-50px)}}
+.fill.go .water{height:112%}
+.fill h2{color:#fff}
+footer{padding:1.5rem;text-align:center;font-size:.9rem;background:var(--deep);color:#b9c9bd}
+
+@media (prefers-reduced-motion:reduce){
+ *{transition:none!important;animation:none!important}
+ .leaves,.tool{display:none}.blow .wrap{opacity:1}.furrows{width:100%}.water{height:112%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="brand">Vert Horizon</span>
+  <a class="tel" href="tel:+33400000000">04 00 00 00 00</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <h1>Votre jardin à Marseille, soigné de A à Z</h1>
+    <p>Pas le temps de tailler, tondre ou ramasser ? Un jardin à refaire entièrement, des haies qui ont pris le dessus ? Vert Horizon, paysagiste à Marseille, crée et entretient les espaces verts des particuliers, copropriétés et entreprises. Vous profitez de votre extérieur, on s’occupe du reste.</p>
+    <a class="btn" href="#contact">Demander mon devis gratuit</a>
+  </div>
+</section>
+
+<!-- Transition 1 : la page est soufflée -->
+<section class="blow" id="services" aria-labelledby="t-services">
+  <div class="leaves" id="leaves" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 id="t-services">Nos services d’espaces verts à Marseille</h2>
+    <p>Du projet complet à l’entretien de tous les jours, nous intervenons dans toute la ville et ses environs.</p>
+    <div class="grid">
+      <div class="card"><h3>Création de jardin</h3><ul><li>Conception sur mesure</li><li>Plantations, massifs et pelouse</li><li>Terrasses et petite maçonnerie paysagère</li></ul></div>
+      <div class="card"><h3>Entretien régulier</h3><ul><li>Tonte et désherbage</li><li>Ramassage des feuilles</li><li>Passage planifié, toute l’année</li></ul></div>
+      <div class="card"><h3>Taille et élagage</h3><ul><li>Taille de haies et d’arbustes</li><li>Élagage sécurisé des arbres</li><li>Évacuation des déchets verts</li></ul></div>
+      <div class="card"><h3>Gazon et arrosage</h3><ul><li>Pose de gazon naturel ou synthétique</li><li>Arrosage automatique adapté au climat provençal</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- Transition 2 : la terre est ratissée -->
+<div class="rake" id="rake" aria-hidden="true">
+  <div class="furrows"></div>
+  <div class="tool"><svg viewBox="0 0 90 150" width="90" height="100%" preserveAspectRatio="none"><rect x="6" y="0" width="6" height="40" fill="#7a5230"/><rect x="0" y="40" width="90" height="8" rx="3" fill="#555"/><g stroke="#555" stroke-width="4" stroke-linecap="round"><path d="M6 48v100M22 48v100M38 48v100M54 48v100M70 48v100M86 48v100"/></g></svg></div>
+</div>
+
+<section class="about" id="apropos">
+  <div class="wrap">
+    <div>
+      <h2>Des jardiniers passionnés, à deux pas de chez vous</h2>
+      <p>Vert Horizon est une entreprise marseillaise : nous connaissons le soleil, le mistral et les sols secs de la région. Nos équipes choisissent des plantes adaptées, arrosent malin et travaillent proprement, pour des jardins qui durent.</p>
+      <p>Chaque chantier commence par une vraie discussion : vos envies, votre budget, votre emploi du temps. Ensuite, nous faisons ce que nous avons dit, au prix annoncé.</p>
+    </div>
+    <div class="sign">Un interlocuteur unique, un devis clair, un jardin dont vous êtes fier. C’est notre engagement.</div>
+  </div>
+</section>
+
+<section class="why" id="pourquoi">
+  <div class="wrap">
+    <h2>Pourquoi nous choisir ?</h2>
+    <ul>
+      <li><strong>Devis gratuit sous 48 h</strong>Réponse rapide, sans engagement.</li>
+      <li><strong>Prix clairs</strong>Aucun supplément surprise en fin de chantier.</li>
+      <li><strong>Pratiques éco-responsables</strong>Plantes économes en eau, déchets verts valorisés.</li>
+      <li><strong>Équipe locale et assurée</strong>Intervention rapide à Marseille et alentours.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Transition 3 : la page se remplit d'eau -->
+<section class="fill" id="contact">
+  <div class="water" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2>Prêt à redonner vie à votre jardin ?</h2>
+    <p>Décrivez-nous votre projet : nous vous répondons avec un devis gratuit sous 48 h.</p>
+    <a class="btn" href="tel:+33400000000">Appeler le 04 00 00 00 00</a>
+    <a class="btn alt" href="mailto:contact@vert-horizon.fr">Écrire un message</a>
+  </div>
+</section>
+</main>
+<footer>Vert Horizon – Paysagiste et entretien d’espaces verts à Marseille</footer>
+
+<script>
+(function(){
+  var zone=document.getElementById('leaves'),cols=['#c58a1b','#a8501f','#8a9a2b','#4f8a3a','#b86b1f'];
+  for(var i=0;i<46;i++){
+    var l=document.createElement('div'),x=Math.random()*92,s=22+Math.random()*26;
+    l.className='leaf';
+    l.style.cssText='left:'+x+'%;top:'+(Math.random()*92)+'%;--s:'+s+'px;--r:'+(Math.random()*360|0)+'deg;--y:'+((Math.random()*160-80)|0)+'px;--d:'+(x/100*0.9+Math.random()*0.3).toFixed(2)+'s';
+    l.innerHTML='<svg viewBox="0 0 24 24" width="100%" height="100%"><path d="M12 2C6 6 3 12 6 20c8 0 14-6 12-18-2 0-4 0-6 0z" fill="'+cols[i%5]+'"/><path d="M6 20C9 14 12 9 16 5" stroke="#0004" fill="none"/></svg>';
+    zone.appendChild(l);
+  }
+  for(var g=0;g<4;g++){var w=document.createElement('div');w.className='gust';w.style.top=(15+g*22)+'%';w.style.setProperty('--d',(g*.25)+'s');zone.appendChild(w);}
+  var els=['.blow','.rake','.fill'].map(function(q){return document.querySelector(q)});
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('go')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('go');io.unobserve(e.target);}})},{threshold:.35});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
